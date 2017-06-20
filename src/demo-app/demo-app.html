@@ -11,13 +11,14 @@
         <style>
             :host {
                 display: block;
-                font-family: 'Roboto', sans-serif;
+                --app-drawer-width: 250px;
             }
 
-            /* Hide drawer-toggle element */
+            /* Hide drawer-toggle element when narrow is not forced
             app-drawer-layout:not([narrow]) [drawer-toggle] {
                 display: none;
             }
+            */
 
             app-header {
                 color: #fff;
@@ -35,7 +36,7 @@
             }
         </style>
 
-        <app-drawer-layout>
+        <app-drawer-layout fullbleed force-narrow>
             <app-drawer slot="drawer"></app-drawer>
 
             <app-header-layout>
