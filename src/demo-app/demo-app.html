@@ -14,6 +14,11 @@
                 font-family: 'Roboto', sans-serif;
             }
 
+            /* Hide drawer-toggle element */
+            app-drawer-layout:not([narrow]) [drawer-toggle] {
+                display: none;
+            }
+
             app-header {
                 color: #fff;
                 background-color: #00897B;
@@ -30,15 +35,21 @@
             }
         </style>
 
-        <app-header>
-            <app-toolbar>
-                <paper-icon-button icon="menu"></paper-icon-button>
-                <div main-title>[[name]]</div>
-                <paper-input label="Search" no-label-float>
-                    <paper-icon-button slot="suffix" icon="search"></paper-icon-button>
-                </paper-input>
-            </app-toolbar>
-        </app-header>
+        <app-drawer-layout>
+            <app-drawer slot="drawer"></app-drawer>
+
+            <app-header-layout>
+                <app-header>
+                    <app-toolbar>
+                        <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+                        <div main-title>[[name]]</div>
+                        <paper-input label="Search" no-label-float>
+                            <paper-icon-button slot="suffix" icon="search"></paper-icon-button>
+                        </paper-input>
+                    </app-toolbar>
+                </app-header>
+            </app-header-layout>
+        </app-drawer-layout>
     </template>
 
     <script>
