@@ -4,6 +4,7 @@
 <link rel="import" href="../../bower_components/app-layout/demo/sample-content.html">
 
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
 
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
@@ -36,10 +37,37 @@
                 --primary-text-color: #fff;
                 --secondary-text-color: #fff;
             }
+
+            app-drawer {
+                margin: 64px 0;
+
+                --app-drawer-content-container: {
+                    background-color: #404040;
+                };
+            }
+
+            app-drawer a {
+                display: block;
+                padding: 10px 20px;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            app-drawer .iron-selected {
+                background-color: #666;
+            }
         </style>
 
         <app-drawer-layout fullbleed force-narrow>
-            <app-drawer slot="drawer" swipe-open></app-drawer>
+            <app-drawer slot="drawer" swipe-open>
+                <iron-selector selected="0">
+                    <a href="#">Home</a>
+                    <a href="#">Work</a>
+                    <a href="#">Blog</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </iron-selector>
+            </app-drawer>
 
             <app-header-layout>
                 <app-header slot="header" effects="waterfall" reveals>
