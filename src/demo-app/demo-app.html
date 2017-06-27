@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../../bower_components/app-layout/demo/sample-content.html">
 <link rel="import" href="../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
 
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
@@ -38,6 +39,8 @@
         </style>
 
         <app-drawer-layout fullbleed force-narrow>
+            <app-drawer slot="drawer" swipe-open></app-drawer>
+
             <app-header-layout>
                 <app-header slot="header" effects="waterfall" reveals>
                     <app-toolbar>
@@ -48,9 +51,9 @@
                         </paper-input>
                     </app-toolbar>
                 </app-header>
-            </app-header-layout>
 
-            <app-drawer slot="drawer" swipe-open></app-drawer>
+                <sample-content size="100"></sample-content>
+            </app-header-layout>
         </app-drawer-layout>
     </template>
 
