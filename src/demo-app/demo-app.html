@@ -50,15 +50,20 @@
                 justify-content: flex-end;
             }
 
-            app-drawer a {
-                display: block;
+            iron-selector .iron-selected {
+                background-color: #666;
+            }
+
+            iron-selector a {
+                display: flex;
+                align-items: center;
                 padding: 10px 20px;
                 color: #fff;
                 text-decoration: none;
             }
 
-            app-drawer .iron-selected {
-                background-color: #666;
+            iron-selector iron-icon {
+                margin-right: 10px;
             }
         </style>
 
@@ -68,11 +73,26 @@
                     <paper-icon-button icon="close" drawer-toggle></paper-icon-button>
                 </app-toolbar>
                 <iron-selector selected="0">
-                    <a href="#">Home</a>
-                    <a href="#">Work</a>
-                    <a href="#">Blog</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <a href="#">
+                        <iron-icon icon="home"></iron-icon>
+                        <span>Home</span>
+                    </a>
+                    <a href="#">
+                        <iron-icon icon="work"></iron-icon>
+                        <span>Work</span>
+                    </a>
+                    <a href="#">
+                        <iron-icon icon="question-answer"></iron-icon>
+                        <span>Blog</span>
+                    </a>
+                    <a href="#">
+                        <iron-icon icon="weekend"></iron-icon>
+                        <span>About</span>
+                    </a>
+                    <a href="#">
+                        <iron-icon icon="settings-phone"></iron-icon>
+                        <span>Contact</span>
+                    </a>
                 </iron-selector>
             </app-drawer>
 
