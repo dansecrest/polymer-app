@@ -4,6 +4,7 @@
 <link rel="import" href="../../bower_components/app-layout/demo/sample-content.html">
 
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-icons/communication-icons.html">
 <link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
 
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
@@ -24,7 +25,7 @@
             */
 
             app-header {
-                color: #fff;
+                color: var(--text-primary-color);
                 background-color: #00897B;
             }
 
@@ -33,13 +34,13 @@
             }
 
             paper-input {
-                --primary-color: #fff;
-                --primary-text-color: #fff;
-                --secondary-text-color: #fff;
+                --primary-color: var(--text-primary-color);
+                --primary-text-color: var(--text-primary-color);
+                --secondary-text-color: var(--text-primary-color);
             }
 
             app-drawer {
-                color: #fff;
+                color: var(--text-primary-color);
 
                 --app-drawer-content-container: {
                     background-color: #404040;
@@ -58,7 +59,7 @@
                 display: flex;
                 align-items: center;
                 padding: 10px 20px;
-                color: #fff;
+                color: var(--text-primary-color);
                 text-decoration: none;
             }
 
@@ -90,7 +91,7 @@
                         <span>About</span>
                     </a>
                     <a href="#">
-                        <iron-icon icon="settings-phone"></iron-icon>
+                        <iron-icon icon="communication:call"></iron-icon>
                         <span>Contact</span>
                     </a>
                 </iron-selector>
