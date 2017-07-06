@@ -13,6 +13,13 @@
     "lint": {
         "rules": ["polymer-2"]
     },
+    // Build presets auto-set build options
+    "builds": [{
+        "preset": "es5-bundled"
+        // "preset": "es6-bundled"
+        // "preset": "es6-unbundled"
+    }]
+    /*
     "builds": [{
         "js": {
             "minify": true,
@@ -24,4 +31,5 @@
         "addServiceWorker": true,
         "bundle": true
     }]
+    */
 }
