@@ -1,7 +1,10 @@
 {
-  "lint": {
-    "rules": [
-      "polymer-2"
-    ]
-  }
+    "entrypoint": "index.html",
+    "shell": "demo-app/demo-app.html",
+    "fragments": [],
+    "sources": [],
+    "extraDependencies": [],
+    "lint": {
+        "rules": ["polymer-2"]
+    }
 }
