@@ -147,6 +147,14 @@
                     }
                 };
             }
+
+            ready() {
+                super.ready();
+
+                if (this.route.path === '/') {
+                    this.set('route.path', '/resolutions');
+                }
+            }
         }
 
         // Register custom element class with browser
