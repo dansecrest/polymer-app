@@ -14,17 +14,6 @@
 
 <dom-module id="demo-app">
     <template>
-        <!-- app-location binds to the app's URL -->
-        <app-location route="{{route}}"></app-location>
-
-        <!-- this app-route manages the top-level routes -->
-        <app-route
-            route="{{route}}"
-            pattern="/:page"
-            data="{{routeData}}"
-            tail="{{subroute}}">
-        </app-route>
-
         <style>
             :host {
                 display: block;
@@ -80,6 +69,17 @@
                 margin-right: 10px;
             }
         </style>
+
+        <!-- app-location binds to the app's URL -->
+        <app-location route="{{route}}"></app-location>
+
+        <!-- this app-route manages the top-level routes -->
+        <app-route
+            route="{{route}}"
+            pattern="/:page"
+            data="{{routeData}}"
+            tail="{{subroute}}">
+        </app-route>
 
         <app-drawer-layout fullbleed force-narrow>
             <app-drawer slot="drawer" swipe-open>
