@@ -86,28 +86,28 @@
                 <app-toolbar>
                     <paper-icon-button icon="ai:close" drawer-toggle></paper-icon-button>
                 </app-toolbar>
-                <iron-selector selected="{{routeData.page}}">
-                    <a href="#">
+                <iron-selector selected="{{routeData.page}}" attr-for-selected="data-page">
+                    <a data-page="resolutions" href="/resolutions">
                         <iron-icon icon="ai:poll"></iron-icon>
                         <span>Resolutions</span>
                     </a>
-                    <a href="#">
+                    <a data-page="audits" href="/audits">
                         <iron-icon icon="ai:tablet-android"></iron-icon>
                         <span>Audits</span>
                     </a>
-                    <a href="#">
+                    <a data-page="search" href="/search">
                         <iron-icon icon="ai:search"></iron-icon>
                         <span>Search</span>
                     </a>
-                    <a href="#">
+                    <a data-page="reports" href="/reports">
                         <iron-icon icon="ai:view-list"></iron-icon>
                         <span>Reports</span>
                     </a>
-                    <a href="#">
+                    <a data-page="admin" href="/admin">
                         <iron-icon icon="ai:settings"></iron-icon>
                         <span>Admin</span>
                     </a>
-                    <a href="#">
+                    <a data-page="support" href="/support">
                         <iron-icon icon="ai:help"></iron-icon>
                         <span>Support</span>
                     </a>
