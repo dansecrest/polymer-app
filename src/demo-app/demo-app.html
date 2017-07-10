@@ -5,12 +5,12 @@
 <link rel="import" href="../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
 <link rel="import" href="../../bower_components/app-layout/demo/sample-content.html">
 
-<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
-<link rel="import" href="../../bower_components/iron-icons/communication-icons.html">
 <link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
 
 <link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
+
+<link rel="import" href="icons.html">
 
 <dom-module id="demo-app">
     <template>
@@ -84,28 +84,32 @@
         <app-drawer-layout fullbleed force-narrow>
             <app-drawer slot="drawer" swipe-open>
                 <app-toolbar>
-                    <paper-icon-button icon="close" drawer-toggle></paper-icon-button>
+                    <paper-icon-button icon="ai:close" drawer-toggle></paper-icon-button>
                 </app-toolbar>
-                <iron-selector selected="0">
+                <iron-selector selected="{{routeData.page}}">
                     <a href="#">
-                        <iron-icon icon="home"></iron-icon>
-                        <span>Home</span>
+                        <iron-icon icon="ai:poll"></iron-icon>
+                        <span>Resolutions</span>
                     </a>
                     <a href="#">
-                        <iron-icon icon="work"></iron-icon>
-                        <span>Work</span>
+                        <iron-icon icon="ai:tablet-android"></iron-icon>
+                        <span>Audits</span>
                     </a>
                     <a href="#">
-                        <iron-icon icon="question-answer"></iron-icon>
-                        <span>Blog</span>
+                        <iron-icon icon="ai:search"></iron-icon>
+                        <span>Search</span>
                     </a>
                     <a href="#">
-                        <iron-icon icon="weekend"></iron-icon>
-                        <span>About</span>
+                        <iron-icon icon="ai:view-list"></iron-icon>
+                        <span>Reports</span>
                     </a>
                     <a href="#">
-                        <iron-icon icon="communication:call"></iron-icon>
-                        <span>Contact</span>
+                        <iron-icon icon="ai:settings"></iron-icon>
+                        <span>Admin</span>
+                    </a>
+                    <a href="#">
+                        <iron-icon icon="ai:help"></iron-icon>
+                        <span>Support</span>
                     </a>
                 </iron-selector>
             </app-drawer>
@@ -113,10 +117,10 @@
             <app-header-layout>
                 <app-header slot="header" effects="waterfall" reveals>
                     <app-toolbar>
-                        <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+                        <paper-icon-button icon="ai:menu" drawer-toggle></paper-icon-button>
                         <div main-title>[[name]]</div>
                         <paper-input label="Search" no-label-float>
-                            <paper-icon-button slot="suffix" icon="search"></paper-icon-button>
+                            <paper-icon-button slot="suffix" icon="ai:search"></paper-icon-button>
                         </paper-input>
                     </app-toolbar>
                 </app-header>
